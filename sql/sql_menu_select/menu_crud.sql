@@ -1,42 +1,57 @@
--- 1 Create Menu table 
---CREATE TABLE Menu (
---    DishID INT PRIMARY KEY,
---    DishNAME VARCHAR(100),
---    price INT,
---    Category VARCHAR(50)
---);
+-- =======================================
+-- Menu Table: CRUD Operations & Filtering
+-- =======================================
 
--- Check if Menu is created
---SELECT * FROM Menu;
 
---2 INSERT INTO Menu VALUES
---(1, 'Chicken Tikka Masala', 180, 'Main'),
---(2, 'Sushi Platter', 250, 'Main'),
---(3, 'Gyoza Dumplings', 90, 'Side');
+-- Step 1: Create the Menu table
+-- CREATE TABLE Menu (
+--     DishID INT PRIMARY KEY,
+--     DishName VARCHAR(100),
+--     Price INT,
+--     Category VARCHAR(50)
+-- );
 
---Check Menu 
---SELECT * FROM Menu
 
---3.1 Find all Main Dish
---SELECT * FROM Menu
---WHERE Category = 'Main';
+-- Step 2: Insert sample records
+-- INSERT INTO Menu VALUES
+-- (1, 'Chicken Tikka Masala', 180, 'Main'),
+-- (2, 'Sushi Platter', 250, 'Main'),
+-- (3, 'Gyoza Dumplings', 90, 'Side');
 
---3.2 Find Main and 200 + Dish
---SELECT * FROM Menu
---WHERE Category = 'Main' and Price > 200;
 
---4 Update Chicken Tikka Masala Price to 230
---UPDATE Menu
---SET Price = 230
---WHERE DishNAME = 'Chicken Tikka Masala';
+-- Step 3: Query all menu items
+-- SELECT * FROM Menu;
 
---Check 
---SELECT * From Menu
---WHERE DishNAME = 'Chicken Tikka Masala'
 
---5 Delete Side Dish
+
+-- Step 4.1: Filter by category - Main dishes only
+-- SELECT * FROM Menu
+-- WHERE Category = 'Main';
+
+
+-- Step 4.2: Filter Main dishes priced over 200
+-- SELECT * FROM Menu
+-- WHERE Category = 'Main' AND Price > 200;
+
+
+
+-- Step 5: Update price of Chicken Tikka Masala to 230
+-- UPDATE Menu
+-- SET Price = 230
+-- WHERE DishName = 'Chicken Tikka Masala';
+
+
+-- Optional: Verify update
+-- SELECT * FROM Menu
+-- WHERE DishName = 'Chicken Tikka Masala';
+
+
+
+-- Step 6: Delete all Side dishes
 DELETE FROM Menu
 WHERE Category = 'Side';
 
---Check 
-SELECT * From Menu
+
+
+-- Step 7: Final check of the Menu table
+SELECT * FROM Menu;
