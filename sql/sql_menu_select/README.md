@@ -1,4 +1,4 @@
-# 🍽️ Menu CRUD + Filtering Practice (Day 2)
+# 🍽️ Menu CRUD + Filtering Practice
 
 This folder contains practice SQL scripts demonstrating CRUD operations and basic filtering queries using a fictional restaurant menu dataset.
 
