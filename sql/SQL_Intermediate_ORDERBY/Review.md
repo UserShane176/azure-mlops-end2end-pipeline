@@ -8,6 +8,3 @@ FROM Orders
 WHERE Country = 'USA' AND TotalAmount > 100
 ORDER BY TotalAmount DESC;
 
-![Create Table](images/01_create_orders_table.png)
-![Insert Data](images/02_insert_orders_data.png)
-![Query Result](images/03_query_usa_high_orders.png)
